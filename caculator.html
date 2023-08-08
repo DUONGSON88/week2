@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caculator</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<input type="number" id="number1"; placeholder="Nhập">
+<input type="number" id="number2"; placeholder="Nhập">
+<br>
+<button onclick="cong()">Addtion(+)</button>
+<button onclick="tru()">Subtraction(-)</button>
+<button onclick="nhan()">Multiplication(*)</button>
+<button onclick="chia()">Division(/)</button>
+<p id="number3" style="background-color: aqua;color: red"></p>
+
+<script>
+    function cong() {
+        a = +document.getElementById("number1").value;
+        b = +document.getElementById("number2").value;
+        document.getElementById("number3").innerHTML = "Kết Quả = " + (a + b);
+        document.getElementById("number1").value = "";
+        document.getElementById("number2").value = "";
+    }
+    function tru() {
+        a = +document.getElementById("number1").value;
+        b = +document.getElementById("number2").value;
+        document.getElementById("number3").innerHTML = "Kết Quả = " + (a - b);
+        document.getElementById("number1").value = "";
+        document.getElementById("number2").value = "";
+    }function nhan() {
+        a = +document.getElementById("number1").value;
+        b = +document.getElementById("number2").value;
+        document.getElementById("number3").innerHTML = "Kết Quả = " + (a * b);
+        document.getElementById("number1").value = "";
+        document.getElementById("number2").value = "";
+    }function chia() {
+        a = +document.getElementById("number1").value;
+        b = +document.getElementById("number2").value;
+        document.getElementById("number3").innerHTML = "Kết Quả = " + (a / b);
+        document.getElementById("number1").value = "";
+        document.getElementById("number2").value = "";
+    }
+</script>
+
+
+
+</body>
+</html>
