@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TBmon</title>
+</head>
+<body>
+<h2>1.Tổng Kết Học Kì 1</h2>
+<input type="text" id="toan" placeholder="Toán">
+<br>
+<input type="text" id="ly" placeholder="Lý">
+<br>
+<input type="text" id="hoa" placeholder="Hóa">
+<br>
+<button onclick="sum()">Kết Quả</button>
+<script>
+    function sum() {
+        let x = +document.getElementById("toan").value;
+        let y = +document.getElementById("ly").value;
+        let z = +document.getElementById("hoa").value;
+        let d = (x + y + z) / 3;
+        let e = x + y + z;
+        alert("DiemTB=  " + d + "  Tổng  " + e)
+        document.write("DiemTB=  " + d + "  Tổng  " + e)
+    }
+
+</script>
+<br>
+<h2>2.Chuyển đổi <sup>0</sup>C sang <sup>0</sup>F</h2>
+<input type="text" id="cel"><sup>0</sup>C
+<br>
+<button onclick="doi()">ChuyểnĐổi</button>
+<script>
+    function doi() {
+        let dof = +document.getElementById("cel").value;
+        let chuyendoi = 5 * (dof - 32) / 9;
+        alert(chuyendoi + "độ F")
+
+    }
+</script>
+<h2>3.Diện tích ,chu vi hình tròn</h2>
+<input type="text" id="bankinh" placeholder="Bán Kính">
+<button onclick="hinhtron()">Kết Quả</button>
+<script>
+    function hinhtron() {
+        let pi = (3.14);
+        let bankinh = +document.getElementById("bankinh").value;
+        let dientich = Math.pow(bankinh, 2) * pi;
+        let chuvi = bankinh * 2 * pi;
+        document.write("Diện tích=   " + dientich + " cm   "+"    Chu vi=  " + chuvi + "  cm")
+        alert("Diện tích=   " + dientich + " cm   "+"    Chu vi=  " + chuvi + "  cm")
+
+    }
+</script>
+</body>
+</html>

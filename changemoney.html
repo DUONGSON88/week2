@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChangeMoney</title>
+</head>
+<body>
+<h3>Amount</h3>
+<input type="text" id="a">
+<h3>From Currency</h3>
+<select id="select1">
+    <option value="vnd">VND</option>
+    <option value="usd">USD</option>
+</select>
+<h3>To Currency</h3>
+<select id="select2">
+    <option value="vnd">VND</option>
+    <option value="usd">USD</option>
+</select>
+<br>
+<br>
+<br>
+<button onclick="annut()">Convert</button>
+<p id="m" style="background-color: aqua;color: red"></p>
+<script>
+    function annut() {
+        let sonhap = document.getElementById("a").value;
+        let select1 = document.getElementById("select1").value;
+        let select2 = document.getElementById("select2").value;
+        if (select1 =="vnd" && select2 == "vnd") {
+            document.getElementById("m").innerHTML=("Số Tiền là:  "+sonhap+"VNĐ");
+            document.getElementById("a").value=("");
+        }
+        if (select1 == "vnd" && select2 == "usd") {
+            document.getElementById("m").innerHTML=("Số Tiền là:  "+sonhap / 24000 + "USD");
+            document.getElementById("a").value=("");
+        }
+        if (select1 == "usd" && select2 == "vnd") {
+            document.getElementById("m").innerHTML=("Số Tiền là:   "+sonhap * 24000 + "VNĐ");
+            document.getElementById("a").value=("");
+        }
+        if (select1 =="usd" && select2 == "usd") {
+            document.getElementById("m").innerHTML=("Số Tiền là:   "+sonhap + "USD");
+            document.getElementById("a").value=("");
+        }
+    }
+
+
+</script>
+
+
+</body>
+</html>
