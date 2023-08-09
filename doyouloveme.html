@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doYouLoveMe</title>
+</head>
+<body>
+<h1>Bạn có yêu tôi không?</h1>
+<div style="margin-left: 70px">
+    <button onclick="clickco()">Có</button>
+    <button id="khong" onmouseover="hoverkhong()"  style="position: relative;left: 0px;top:0px">Không</button>
+</div>
+<script>
+    function clickco() {
+        alert("Mình cũng yêu bạn");
+    }
+
+    function hoverkhong() {
+        let a = document.getElementById("khong");
+        a.style.left = (Math.random() * window.innerWidth) + "px";
+        a.style.top = (Math.random() * window.innerHeight) + "px";
+
+    }
+
+</script>
+
+
+</body>
+</html>

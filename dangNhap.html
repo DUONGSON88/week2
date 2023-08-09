@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dangNhap</title>
+</head>
+<body>
+<h1>Code Gym</h1>
+<input type="text" placeholder="Admin" id="tk"><br>
+<input type="text" placeholder="MatKhau" id="mk"><br>
+
+<button onclick="dangnhap()">Dangnhap</button>
+<script>
+    function dangnhap() {
+        let a = document.getElementById("tk").value;
+        let b = document.getElementById("mk").value;
+        if (a == "Admin") {
+            if (b == "TheMaster") {
+                alert("XinChao")
+            }else if (b==""){
+                alert("hay nhap mk")
+            } else {
+                alert("sai mk")}
+        } else {
+            alert("ko co tk")
+        }
+    }
+
+
+    // <script>
+    //     let userName = prompt("Hãy nhập tài khoản!");
+    //     if (userName == "admin"){
+    //         let pass =prompt("Hãy nhập mật khẩu!");
+    //         if (pass =="TheMaster"){
+    //             alert("Xin chao!");
+    //         }else if (pass == null){
+    //             alert("huy bo.");
+    //         }else {
+    //             alert("sai mat khau");
+    //         }
+    //     }else if (userName== null){
+    //         alert("huy bo")
+    //     }else {
+    //         alert("sai tai khoan")
+    //     }
+
+</script>
+
+
+</body>
+</html>

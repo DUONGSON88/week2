@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>namNhuan</title>
+</head>
+<body>
+<script>
+  // Cách 1:
+  let year= parseInt(prompt("Nhập số năm"))
+  if (year %4 ==0){
+    if (year %100==0){
+      if(year %400==0){
+        alert(year + "là năm nhuận");
+      }else {
+        alert (year +" không phải là năm nhuận")
+      }
+    }else {
+      alert(year+ " là năm nhuận")
+    }
+  }else {
+    alert (year + " không phải là năm nhuận")
+  }
+  // Gộp lại sai
+  // let year= parseInt(prompt("nhâp số năm"))
+  // if (year %4 ==0 || year % 100==0 || year%400 ==0){
+  //   alert(year +" là năm nhuận")
+  // }else {
+  //   alert(year + " không phải là năm nhuận")
+  // }
+  // let year= parseInt(prompt("nhâp số năm"))
+  // if(year %4 == 0&& year %100 !=0 ) {
+  //   alert("nam nhuan")
+  //
+  // }
+  // if (year %400==0 && year %100 ==0){
+  //   alert("nam nhuan")
+  // }
+  // if (year %100 == 0&& year %400 !=0 ){
+  //   alert("khong phai nam nhuan")
+
+
+</script>
+
+
+
+</body>
+</html>
