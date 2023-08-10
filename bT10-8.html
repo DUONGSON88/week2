@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bT10_8</title>
+</head>
+<body>
+<h1>Chuyen doi Do C sang do F</h1>
+Do C<input type="text" id="doc">
+<br>
+<br>
+<button onclick="chuyendoi()">Chuyendoi</button>
+<script>
+    function chuyendoi() {
+        let a = +document.getElementById("doc").value;
+        let chuyendoi = a * 9 / 5 + 32
+        alert(chuyendoi + "doF")
+    }
+</script>
+<h1>chuyen tu met sang feet</h1>
+met<input type="text" id="met">
+<br>
+<button onclick="sum()">feet</button>
+<script>
+    function sum() {
+        let a = +document.getElementById("met").value;
+        let sum = a * 3.2808;
+        alert(sum + "feet");
+    }
+</script>
+<h1>Tinh dien tich hinh vuong</h1>
+Do dai canh<input type="text" id="canh">
+<br>
+<button onclick="tinh()">tinhdientich</button>
+<script>
+    function tinh() {
+        let a = document.getElementById("canh").value;
+        let dientich = a * a
+        alert("dien tich hinh vuong la  " + dientich + "  cm")
+    }
+</script>
+<h1>tinh dien tich tam giac vuong</h1>
+canh ke goc vuong 1<input type="text" id="a1">
+<br>
+canh ke goc vuong 2<input type="text" id="b1">
+<br>
+<button onclick="hinhvuong()">Tinhdientich</button>
+<script>
+    function hinhvuong() {
+        let a = document.getElementById("a1").value;
+        let b = document.getElementById("b1").value;
+        let hinhvuong = a * b / 2
+        alert("dien tich hinh vuong bang: " + hinhvuong + "  cm")
+    }
+</script>
+
+</body>
+</html>

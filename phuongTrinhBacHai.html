@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phuongTrinhBacHai</title>
+</head>
+<body>
+<script>
+    let a=+prompt("Phuong trinh bac 2   ax^2+bx+c=0"+"   hay nhap so a");
+    let b=+prompt("Phuong trinh bac 2   ax^2+bx+c=0"+"   hay nhap so b");
+    let c=+prompt("Phuong trinh bac 2   ax^2+bx+c=0"+"   hay nhap so c");
+    let anfa=b*b-4*a*c
+    let nghiemkep=-b/(2*a)
+    let nghiem1=(-b+Math.sqrt(anfa))/2*a
+    let nghiem2=(-b-Math.sqrt(anfa))/2*a
+    if (anfa<0){
+        alert("phuong trinh tren vo nghiem")
+    }else if(anfa=0){
+        alert("phuong trinh tren co nghiem kep la :"+nghiemkep);
+    }else {
+        alert("phuong trinh co 2 nghiem: "+ "x1=   " +nghiem1 +"    x2=  "+nghiem2)
+    }
+</script>
+
+</body>
+</html>

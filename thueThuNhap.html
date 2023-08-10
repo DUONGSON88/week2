@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thueThuNhap</title>
+</head>
+<body>
+<script>
+  let a=prompt("Hay nhap ten cua ban");
+  let b=+prompt("Hay nhap tong thu nhap ca nhan cua ban(.000.000vnd)")
+  let c=b*6/100
+  let d=b*8/100
+  let e=b*10/100
+  if (b<5000000){
+    alert("Thue thu nhap ca nhan cua "+a+"la "+c+ "vnd")
+  }else if(b>5000000 && b<1000000){
+    alert("Thue " +
+            "thu nhap ca nhan cua "+a+"la "+d+ "vnd")
+  }else {
+    alert("Thue thu nhap ca nhan cua "+a+"la "+e+ "vnd")
+  }
+</script>
+
+</body>
+</html>

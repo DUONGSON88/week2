@@ -5,23 +5,37 @@
     <title>chisocannang</title>
 </head>
 <body>
-<h1>Tinh BMI</h1>
-<input type="text" id="a" placeholder="cannang(kg)">
-<input type="text" id="b" placeholder="chieucao(m)">
-<button onclick="tinhbmi()">TinhBMI</button>
+<h1>Tính BMI</h1>
+<input type="text" id="a" placeholder="(kg)">Cân Nặng
+<br>
+<input type="text" id="b" placeholder="(m)">Chiều cao
+<br>
+<br>
+<br>
+<button onclick="tinhbmi()">Tinh</button>
+<br>
+
+<p id="c"style="color: red"></p>
 <script>
+
     function tinhbmi() {
         let cannang = +document.getElementById("a").value;
         let chieucao = +document.getElementById("b").value;
-        let bmi = cannang / ( chieucao*chieucao);
-        if (bmi < 18.5) {
-            alert("thieu can");
-        }else if (bmi>=18.5 && bmi<25){
-            alert("Binh Thuong");
-        }else if (bmi >=25 && bmi<30){
-            alert("Thua Can");
-        }else {
-            alert("Beo Phi");
+        let bmi = cannang / (chieucao * chieucao);
+        if (cannang == 0 && chieucao == 0) {
+            alert("Bạn hãy nhập cân nặng và chiều cao của bạn!");
+        } else if (cannang == 0) {
+            alert("Bạn hãy nhập cân nặng của bạn!");
+        } else if (chieucao == 0) {
+            alert("Bạn hãy nhập chiều cao của bạn");
+        } else if (bmi < 18.5) {
+            document.getElementById("c").innerHTML = "Bạn gầy quá .Cần ăn uống nhiều thêm!"+"<img src = 'https://i.pinimg.com/originals/3b/97/63/3b97635b6bd4a5bfc436fbd3908f05e0.gif' width='100' height= '100'>";
+        } else if (bmi >= 18.5 && bmi < 25) {
+            document.getElementById("c").innerHTML = "Bạn đang cân đối. Hãy duy trì nhé!";
+        } else if (bmi >= 25 && bmi < 30) {
+            document.getElementById("c").innerHTML = "Bạn hơi thừa cân .Hãy cân đối dinh dưỡng nhé!";
+        } else {
+            document.getElementById("c").innerHTML = "Bạn đạt mức độ béo phì.Để đảm bảo sức khỏe bạn hãy giảm cân"+"<img src = 'https://i.pinimg.com/originals/73/4d/11/734d11cc677595ce3c3e5e3bba02721f.gif' width='100' height= '100'>";
         }
     }
 
